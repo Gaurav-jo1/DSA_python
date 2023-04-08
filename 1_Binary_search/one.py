@@ -1,19 +1,16 @@
-# Q- Finding the starting and ending index of the target
-
-nums = [5, 7, 7, 7, 7, 8, 8, 10]
-target = 7
-
-
-def positionA():
+def searchRange(nums, target):
     ans = [-1, -1]
 
-    ans[0] = positionE(True)
-    ans[1] = positionE(False)
+    start = positionE(True, nums, target)
+    end = positionE(False, nums, target)
+
+    ans[0] = start
+    ans[1] = end
 
     return ans
 
 
-def positionE(findStartIndex):
+def positionE(findStartIndex, nums, target):
     start = 0
     end = len(nums) - 1
     ans = -1
@@ -32,6 +29,4 @@ def positionE(findStartIndex):
     return ans
 
 
-print(positionA())
-
-
+print(searchRange([5, 7, 7, 8, 8, 10], 8))

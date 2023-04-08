@@ -6,3 +6,4 @@ def insertion_sort(arr):
     return arr
 
 print(insertion_sort([5, 4, 2, 1]))
+ 
