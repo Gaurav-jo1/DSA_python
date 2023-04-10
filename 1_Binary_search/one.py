@@ -1,4 +1,5 @@
 # Q- Find First and Last Position of Element in Sorted Array
+# Leetcode link - https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
 def searchRange(nums, target):
     ans = [-1, -1]
@@ -30,5 +31,3 @@ def positionE(findStartIndex, nums, target):
     return ans
 
 print(searchRange([5, 7, 7, 8, 8, 10], 8))
-
-# Leetcode question - https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
