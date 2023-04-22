@@ -5,5 +5,5 @@ def insertion_sort(arr):
                 arr[i], arr[j] = arr[j], arr[i]
     return arr
 
+
 print(insertion_sort([5, 4, 2, 1]))
- 
