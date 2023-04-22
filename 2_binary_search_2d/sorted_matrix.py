@@ -8,7 +8,7 @@ def RowColMatrix():
         [33, 34, 38, 50]
     ]
 
-    target = 33
+    target = 29
 
     return search(arr, target)
 
