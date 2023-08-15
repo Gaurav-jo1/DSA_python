@@ -32,5 +32,4 @@ def cycle_sort(arr):
 
     return arr
 
-
 print(cycle_sort([5, 4, 3, 6, 9, 1, 0]))
