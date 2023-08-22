@@ -1,16 +1,14 @@
-def fibonacci(n):
-    if n < 2:
-        return n
-    else:
-        answer = fibonacci(n - 1) + fibonacci(n - 2)
-        return answer
+# Printing the Number in reverse and non-reverse order
 
-# print(fibonacci(n=12))
+def numBoth(n):
+    if n == 0:
+        return
 
-def factorial(n):
-    if n == 1:
-        return 1
-    else:
-        return n * factorial(n - 1)
+    print(n)
 
-print(factorial(6)) 
+    numBoth(n - 1)
+
+    if n != 1:
+        print(n)
+
+numBoth(5)
