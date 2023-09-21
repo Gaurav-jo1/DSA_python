@@ -1,13 +1,13 @@
-def FindSubsets(string, current="", index=0):
-    if index == len(string):
-        print(current)
+def FindSubset(proc="", unproc="abc"):
+    if unproc == "":
+        print(proc)
         return
 
-    FindSubsets(string, current + string[index], index + 1)
-    FindSubsets(string, current, index + 1)
+    FindSubset(proc + unproc[0], unproc[1:])
+    FindSubset(proc, unproc[1:])
 
+# FindSubset()
 
-# FindSubsets("abc")
 
 def ArraySubsets(string, current="", index=0):
     if index == len(string):
@@ -18,7 +18,9 @@ def ArraySubsets(string, current="", index=0):
 
     return subsets_with_char + subsets_without_char
 
+
 # print(ArraySubsets("abc"))
+
 
 def FindSubsetsASCII(string, current="", index=0):
     if index == len(string):
@@ -28,5 +30,6 @@ def FindSubsetsASCII(string, current="", index=0):
 
     FindSubsetsASCII(string, current + string[index], index + 1)
     FindSubsetsASCII(string, current, index + 1)
+
 
 FindSubsetsASCII("abc")
