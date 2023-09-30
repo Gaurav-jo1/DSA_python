@@ -29,7 +29,7 @@ def MazeStep(row: int, column: int, step: str = "") -> List[str]:
 
     return paths
 
-# print(MazeStep(3, 3))
+print(MazeStep(4, 3))
 
 def MazeStepDigonal(row: int, column: int, step: str = "") -> List[str]:
     paths = []
@@ -37,7 +37,6 @@ def MazeStepDigonal(row: int, column: int, step: str = "") -> List[str]:
     # Base case: we reached the end of the maze
     if row == 1 and column == 1:
         return [step]
-
     
     # Check if we can move down (row > 1)
     if row > 1:
@@ -51,4 +50,4 @@ def MazeStepDigonal(row: int, column: int, step: str = "") -> List[str]:
 
     return paths
 
-print(MazeStepDigonal(3, 3))
+# print(MazeStepDigonal(3, 3))
