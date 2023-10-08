@@ -1,47 +1,53 @@
-def solve_n_queens(n):
-    def is_safe(board, row, col):
-        # Check if it's safe to place a queen at board[row][col]
-        # Check the row
-        for i in range(col):
-            if board[row][i] == 1:
-                return False
+def main():
+    n = 4
+    board = [[False for _ in range(n)] for _ in range(n)]  # Initialize the chessboard with all empty squares
 
-        # Check the upper-left diagonal
-        for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
-            if board[i][j] == 1:
-                return False
+    print(queens(board, row=0))  # Start the NQueens solver with an empty board at the first row
 
-        # Check the lower-left diagonal
-        for i, j in zip(range(row, n), range(col, -1, -1)):
-            if board[i][j] == 1:
-                return False
+def queens(board, row):
+    if row == len(board):
+        display(board)  # If all queens are placed (base case), display the board
+        print()
+        return 1  # Return 1 to indicate a valid placement of queens
 
-        return True
+    count = 0  # Initialize a count to keep track of valid solutions
 
-    def solve(board, col):
-        # If all queens are placed successfully, we have found a solution
-        if col >= n:
-            solutions.append([row[:] for row in board])
-            return
+    for col in range(len(board)):
+        if is_safe(board, row, col):  # Check if it's safe to place a queen at this position
+            board[row][col] = True  # Place the queen
+            count += queens(board, row + 1)  # Recursively try to place queens in the next row
+            board[row][col] = False  # Backtrack by removing the queen
 
-        for i in range(n):
-            if is_safe(board, i, col):
-                # Place a queen at board[i][col]
-                board[i][col] = 1
-                # Recur to place queens in the next columns
-                solve(board, col + 1)
-                # Backtrack and remove the queen to explore other possibilities
-                board[i][col] = 0
+    return count  # Return the count of valid solutions
 
-    solutions = []
-    board = [[0 for _ in range(n)] for _ in range(n)]
-    solve(board, 0)
-    return solutions
+def is_safe(board, row, col):
+    # Check if there is no queen in the same column
+    for i in range(row):
+        if board[i][col]:
+            return False
 
-# Example usage:
-n = 4
-solutions = solve_n_queens(n)
-for solution in solutions:
-    for row in solution:
-        print(' '.join(['Q' if cell == 1 else '.' for cell in row]))
-    print()
+    # Check if there is no queen on the left diagonal
+    max_left = min(row, col)
+    for i in range(1, max_left + 1):
+        if board[row - i][col - i]:
+            return False
+
+    # Check if there is no queen on the right diagonal
+    max_right = min(row, len(board) - col - 1)
+    for i in range(1, max_right + 1):
+        if board[row - i][col + i]:
+            return False
+
+    return True  # It's safe to place a queen at this position
+
+def display(board):
+    for row in board:
+        for element in row:
+            if element:
+                print("Q ", end="")  # Print 'Q' for a queen
+            else:
+                print(". ", end="")  # Print '.' for an empty square
+        print()
+
+if __name__ == "__main__":
+    main()
