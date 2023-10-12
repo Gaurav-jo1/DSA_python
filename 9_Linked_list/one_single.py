@@ -62,6 +62,10 @@ class LinkedList:
     def delete_node_index(self, index: int):
         current = self.head
 
+        if index == 0:
+            self.delete__first_node()
+            return
+
         for i in range(index + 1):
             if i == index:
                 current_previous.next = current.next
@@ -69,6 +73,10 @@ class LinkedList:
 
             current_previous = current
             current = current.next
+
+            if not current:
+                print("Index is Out of range")
+                return
 
         # 1 2 3 4 5
 
@@ -92,8 +100,7 @@ my_linked_list.append_e(5)
 # my_linked_list.append_index(3, 3)
 # my_linked_list.delete__first_node()
 # my_linked_list.delete_last_node()
-my_linked_list.delete_node_index(2)
-
+my_linked_list.delete_node_index(10)
 # Displaying the linked list
 
 my_linked_list.display()
