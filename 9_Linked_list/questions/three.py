@@ -27,7 +27,7 @@ def hasCycle(head=None) -> bool:
 # Find the length
 
 
-def length(head=None) -> bool:
+def lengthCycle(head=None) -> bool:
     fast_node = head
     slow_node = head
 
@@ -45,3 +45,5 @@ def length(head=None) -> bool:
                     break
 
     return 0
+    
+    
