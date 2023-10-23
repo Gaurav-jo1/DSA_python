@@ -2,7 +2,8 @@ class CircularQueue:
     def __init__(self, size):
         self.size = size
         self.queue = [None] * size
-        self.front = self.rear = -1
+        self.front = -1
+        self.rear = -1
 
     def enqueue(self, item):
         if (self.rear + 1) % self.size == self.front:
