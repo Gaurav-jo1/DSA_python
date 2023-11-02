@@ -8,11 +8,3 @@
 ![Screenshot from 2023-11-01 11-57-04](https://github.com/Gaurav-jo1/DSA_Python/assets/93304640/6ec6619b-550f-4b9c-b989-faf4c7ef6621)
 
 ![Screenshot from 2023-11-01 11-57-16](https://github.com/Gaurav-jo1/DSA_Python/assets/93304640/8bcb0224-b25b-4650-be42-1024c2b56ef2)
-
-
-
-# Example:
-
-![Example](../../../../Pictures/Screenshots/Screenshot%20from%202023-11-01%2012-01-55.png)
-
-![Example 2](../../../../Pictures/Screenshots/Screenshot%20from%202023-11-01%2012-23-22.png)
