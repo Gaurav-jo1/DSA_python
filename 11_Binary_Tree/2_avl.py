@@ -76,14 +76,6 @@ class AVLTree:
 
         return y
 
-    def pre_order_traversal(self, root):
-        if not root:
-            return
-        print("{0} ".format(root.key), end="")
-        self.pre_order_traversal(root.left)
-        self.pre_order_traversal(root.right)
-
-
 my_tree = AVLTree()
 root = None
 
@@ -93,6 +85,3 @@ root = my_tree.insert(root, 30)
 root = my_tree.insert(root, 40)
 root = my_tree.insert(root, 50)
 root = my_tree.insert(root, 25)
-
-print("Preorder traversal of the constructed AVL tree is:")
-my_tree.pre_order_traversal(root)
