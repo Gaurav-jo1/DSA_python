@@ -1,12 +1,12 @@
 arr = [2, 4, 5, 6, 7, 12, 14, 15, 17, 19, 21, 24]
 
-target = 16
+target = 21
 
 def sorting():
     start = 0
     end = len(arr) - 1
     while start <= end:
-        mid = (start + end) // 2
+        mid = start + (end - start) // 2
         if arr[mid] == target:
             return mid
         elif arr[mid] < target:
@@ -39,7 +39,7 @@ def floor():
     
     return arr[end]
 
-print(floor())
+print(sorting())
 
 # Leetcode question to checkout
 
