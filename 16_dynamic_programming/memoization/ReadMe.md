@@ -7,3 +7,10 @@
 ## 3. Given a set of coins, how can we make 27 cents in the least number of coins?
 
 ## 4. Given a set of substrings, what are the possible ways to construct the string "potentpot"?
+
+
+CanSum -> Decision Problem
+
+howSum -> Combinatoric Problem
+
+bestSum -> Optimization Problem
