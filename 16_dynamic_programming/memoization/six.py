@@ -8,16 +8,39 @@ class canConstruct:
         pass
 
     def can_construct(self, target: str, wordBank: list[str]) -> bool:
-        pass
         if not target:
             return True
 
         for word in wordBank:
-            if word in target:
+            if target.startswith(word) or target.endswith(word):
                 if self.can_construct(target.replace(word, ""), wordBank):
                     return True
 
         return False
 
 
-print(canConstruct().can_construct("abcdef", ["ab", "abc", "cd", "def", "abcd"]))
+print(
+    canConstruct().can_construct(
+        "skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]
+    )
+    # False
+)
+print(
+    canConstruct().can_construct("abcdef", ["ab", "abc", "cd", "def", "abcd"])
+)  # True
+print(
+    canConstruct().can_construct(
+        "skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]
+    )
+)  # False
+print(
+    canConstruct().can_construct(
+        "enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"]
+    )
+)  # True
+print(
+    canConstruct().can_construct(
+        "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
+        ["e", "ee", "eee", "eeee", "eeeee"],
+    )
+)  # False
