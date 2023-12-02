@@ -26,8 +26,8 @@ class countConstruct:
 
 
 canC = countConstruct()
-# print(canC.can_construct("abcdef", ["ab", "abc", "cd", "def", "abcd"]))
-print(canC.can_construct("purple", ["purp", "p", "ur", "le", "purpl"]))
+print(canC.can_construct("abcdef", ["ab", "abc", "cd", "def", "abcd"]))
+# print(canC.can_construct("purple", ["purp", "p", "ur", "le", "purpl"]))
 
 
 # class countConstruct:
