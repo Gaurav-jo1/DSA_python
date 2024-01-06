@@ -53,7 +53,7 @@ if __name__ == '__main__':
     bst.inorder_traversal(bst.root)
 
     # Search for a node
-    result = bst.search(40)
+    result = bst.search(60)
     if result:
         print(f"\nNode {result.val} found.")
     else:

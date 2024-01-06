@@ -1,4 +1,9 @@
-1. Bubble Sort
-2. Selection Sort
-3. Insertion Sort
-4. Cycle Sort
+1. Bubble Sort - putting the biggest number at the end. (n^2)
+
+2. Selection Sort - getting the smallest element and putting to first (n^2)
+
+3. Insertion Sort - taking the number and putting into it's right place (n^2)
+
+4. Merge sort - O(n log n)
+
+4. Cycle Sort - O(n^2)

@@ -26,15 +26,15 @@ class Stack:
 
 # Example usage
 
-# stack = Stack()
+stack = Stack()
 
-# # Pushing elements onto the stack
-# stack.push(5)
-# stack.push(10)
-# stack.push(15)
+# Pushing elements onto the stack
+stack.push(5)
+stack.push(10)
+stack.push(15)
 
-# # Peeking at the top element
-# print("Top element:", stack.peek())
+# Peeking at the top element
+print("Top element:", stack.peek())
 
 # # Popping elements from the stack
 # print("Popped:", stack.pop())
