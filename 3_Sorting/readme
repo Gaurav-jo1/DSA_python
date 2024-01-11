@@ -6,4 +6,6 @@
 
 4. Merge sort - O(n log n)
 
-4. Cycle Sort - O(n^2)
+5. Cycle Sort - O(n^2)
+
+6. Quick Sort - Choosing a pivot and comparing the element in the array and merging the sorted array.
