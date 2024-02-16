@@ -2,7 +2,7 @@ arr = [2, 4, 5, 6, 7, 12, 14, 15, 17, 19, 21, 24]
 
 target = 21
 
-def sorting():
+def b_search():
     start = 0
     end = len(arr) - 1
     while start <= end:
@@ -39,7 +39,7 @@ def floor():
     
     return arr[end]
 
-print(sorting())
+print(b_search())
 
 # Leetcode question to checkout
 
