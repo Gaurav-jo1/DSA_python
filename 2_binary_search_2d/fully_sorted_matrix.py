@@ -6,11 +6,18 @@ def main():
         [13, 14, 15, 16]
     ]
 
-    target = 11
+    target = 3
 
     return search(arr, target)
 
 def search(arr, target):
-    pass
+    for i in range(len(arr)):
 
-# print(main())
+        if target > arr[i][-1]:
+            continue
+
+        for j in range(len(arr[i])):
+            if target == arr[i][j]:
+                return print([i, j])
+
+main()
