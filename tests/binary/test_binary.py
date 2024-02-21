@@ -1,6 +1,6 @@
 # test_binary_search.py
 import pytest
-from Practice_code.binary import b_search
+from Practice_code.binary.binary import b_search
 
 
 def test_binary_search():
@@ -35,7 +35,7 @@ def test_binary_search():
     assert b_search(arr6, target6) == -1
 
 
-from Practice_code.binary import ceiling
+from Practice_code.binary.binary import ceiling
 
 def test_ceiling():
     # Test case 1: Target is smaller than all elements in the array
@@ -69,7 +69,7 @@ def test_ceiling():
     assert ceiling(arr6, target6) == None
 
 
-from Practice_code.binary import floor
+from Practice_code.binary.binary import floor
 
 # Pytest function to test floor function
 def test_floor():

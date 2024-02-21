@@ -1,5 +1,5 @@
 import pytest
-from Practice_code.binary_2d import binary_search_2d
+from Practice_code.binary.binary_2d import binary_search_2d
 
 @pytest.fixture
 def sorted_2d_array():
