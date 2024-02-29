@@ -23,6 +23,6 @@ def MazeStepRestriction(row: int, column: int, step: str = "") -> List[str]:
     return paths
 
 
-# print(MazeStepRestriction(3, 3))
+print(MazeStepRestriction(3, 3))
 
 
