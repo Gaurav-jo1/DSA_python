@@ -97,10 +97,10 @@ my_linked_list.append_e(2)
 my_linked_list.append_e(3)
 my_linked_list.append_e(4)
 my_linked_list.append_e(5)
-# my_linked_list.append_index(3, 3)
+# my_linked_list.append_index(7, 3)
 # my_linked_list.delete__first_node()
 # my_linked_list.delete_last_node()
-my_linked_list.delete_node_index(10)
+# my_linked_list.delete_node_index(10)
 # Displaying the linked list
 
 my_linked_list.display()

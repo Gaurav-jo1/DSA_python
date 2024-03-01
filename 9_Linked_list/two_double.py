@@ -4,15 +4,12 @@ class Node:
         self.previous = None
         self.next = None
 
-
 class Doubly_LinkedList():
-
     def __init__(self):
         self.head = None
         self.tail = None
 
     def append_end(self, data:int):
-
         new_node = Node(data)
 
         if not self.head:
