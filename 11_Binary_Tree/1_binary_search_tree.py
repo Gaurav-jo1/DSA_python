@@ -4,7 +4,6 @@ class TreeNode:
         self.right = None
         self.val = key
 
-
 class BinarySearchTree:
     def __init__(self):
         self.root = None
@@ -36,7 +35,6 @@ class BinarySearchTree:
             self.inorder_traversal(root.left)
             print(root.val, end=" ")
             self.inorder_traversal(root.right)
-
 
 # Example usage:
 if __name__ == '__main__':

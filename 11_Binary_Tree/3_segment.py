@@ -1,7 +1,7 @@
 # When to use segment - When you query on a range.
-
+# Perform query on a range in 
+# log (n) - time complexity
 # Example - Sum, Max, Avg, Min, Product.
-
 
 class SegmentTree:
     def __init__(self, arr):
@@ -36,7 +36,6 @@ class SegmentTree:
             left //= 2
             right //= 2
         return result
-
 
 # Example usage
 arr = [1, 3, 5, 7, 9, 11]

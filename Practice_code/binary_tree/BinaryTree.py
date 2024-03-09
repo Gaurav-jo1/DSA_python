@@ -1,42 +1,24 @@
-# Trees
-# Binary Trees
-# Binary Search Trees
-
-# Why we use Binary trees?
-
-# 1. O (log n)
-# 2. Ordered Storage
-# 3. Cost Efficient
-
-# Where it is used?
-
-# 1. File systempython
-# 2. Databases
-# 3. Network Routing
-
-
-class TreeNode:
-    def __init__(self, data):
+class TreeNode():
+    def __init__(self, data) -> None:
         self.data = data
         self.left = None
         self.right = None
 
-
-class BinaryTree:
+class BinaryTree():
     def __init__(self, data):
         self.root = TreeNode(data)
-
+    
     def insert(self, data, node):
-        if data < node.data:
-            if node.left is None:
-                node.left = TreeNode(data)
-            else:
-                self.insert(data, node.left)
-        elif data > node.data:
+        if data >= node.data:
             if node.right is None:
                 node.right = TreeNode(data)
             else:
                 self.insert(data, node.right)
+        else:
+            if node.left is None:
+                node.left = TreeNode(data)
+            else:
+                self.insert(data, node.left)
 
     def inorder_traversal(self, node):
         if node:
@@ -46,16 +28,15 @@ class BinaryTree:
 
     def preorder_traversal(self, node):
         if node:
-            print(node.data, end=" ")
-            self.preorder_traversal(node.left)
-            self.preorder_traversal(node.right)
+            print(f"{node.data} ", end="")
+            self.preorder_traversal(node.left) 
+            self.preorder_traversal(node.right) 
 
     def postorder_traversal(self, node):
         if node:
             self.postorder_traversal(node.left)
             self.postorder_traversal(node.right)
             print(node.data, end=" ")
-
 
 if __name__ == "__main__":
     tree = BinaryTree(5)
