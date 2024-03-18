@@ -13,8 +13,7 @@ def string_join():
 
     print(result_string)
 
-
-def string_join():
+def string_joining():
     name = "John"
     age = 30
 
@@ -50,6 +49,6 @@ def string_methods():
 
 
 if __name__ == "__main__":
-    # string_Method()
     # string_join()
-    string_methods()
+    string_joining()
+    # string_methods()

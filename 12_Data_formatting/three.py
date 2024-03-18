@@ -5,8 +5,8 @@ file = open('./hello.txt', 'w')  # opens the file in write mode
 file.write('Hello, this is some content to write to the file.')
 
 # Appending to a file
-file = open('./hello.txt', 'a')  # opens the file in append mode
-file.write('\nThis is additional content appended to the file.')
+# file = open('./hello.txt', 'a')  # opens the file in append mode
+# file.write('\nThis is additional content appended to the file.')
 
 # Closing a file
 file.close()
