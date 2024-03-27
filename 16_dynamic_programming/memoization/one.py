@@ -34,7 +34,7 @@ class FibSecond:
         if count == num:
             return current_value
 
-        return self.find_value(num, prev_value, current_value, count)
+        return self.fib_value(num, prev_value, current_value, count)
 
 
 # series_2 = FibSecond()
@@ -56,4 +56,4 @@ def fib(n, memo={}):
     return memo[n]
 
 
-print(fib(6))
+# print(fib(6))
