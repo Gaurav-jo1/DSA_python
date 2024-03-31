@@ -8,24 +8,28 @@ class allConstruct:
         self.memo = {}
 
     def construct(self, target: str, wordBank: list[str]) -> list[list[str]]:
-        if target in self.memo:
-            return self.memo[target]
+        # if target in self.memo:
+        #     return self.memo[target]
 
         if not target:
-            return [[]]
+            return []
 
-        results = []
+        combinations = None
 
         for word in wordBank:
             if target.startswith(word):
-                new_word = target.replace(word, "")
-                suffixWays = self.construct(new_word, wordBank)
-                if len(suffixWays) != 0:
-                    for way in suffixWays:
-                        results.append([word] + way)
+                is_constructed = self.construct(target.replace(word, ""), wordBank)
 
-        self.memo[target] = results
-        return results
+                if is_constructed is not None:
+                    if combinations is None:
+                        combinations = [word] + is_constructed
+                        return combinations
+                    else:
+                        combinations += [word] + is_constructed
+                        return combinations
+
+        return combinations
+
 
 # print(allConstruct().construct("abcdef", ["ab", "abc", "cd", "def", "abcd"]))
 print(allConstruct().construct("purple", ["purp", "p", "ur", "le", "purpl"]))

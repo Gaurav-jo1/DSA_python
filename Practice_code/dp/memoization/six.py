@@ -8,44 +8,48 @@ class canConstruct:
         self.memo = {}
 
     def can_construct(self, target: str, wordBank: list[str]) -> bool:
-        if target in self.memo:
-            return self.memo[target]
 
         if not target:
             return True
 
         for word in wordBank:
-            if target.startswith(word) or target.endswith(word):
-                if self.can_construct(target.replace(word, ""), wordBank):
-                    self.memo[target] = True
+
+            if target.startswith(word):
+                new_target = target.replace(word, "")
+                is_construct = self.can_construct(new_target, wordBank)
+
+                if is_construct:
                     return True
 
-        self.memo[target] = False
         return False
 
 
-# print("enterapotentpot", ["a", "p", "ent", "enter", "ot", "t", "o"])
+# print(
+#     canConstruct().can_construct("abcdef", ["ab", "abc", "cd", "def", "abcd"])
+# )  # True
+
+# print(
 #     canConstruct().can_construct(
 #         "skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]
 #     )
 #     # False
 # )
-# print(
-#     canConstruct().can_construct("abcdef", ["ab", "abc", "cd", "def", "abcd"])
-# )  # True
+
 # print(
 #     canConstruct().can_construct(
 #         "skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]
 #     )
 # )  # False
+
 # print(
 #     canConstruct().can_construct(
 #         "enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"]
 #     )
 # )  # True
-# print(
-#     canConstruct().can_construct(
-#         "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
-#         ["e", "ee", "eee", "eeee", "eeeee"],
-#     )
-# )  # False
+
+print(
+    canConstruct().can_construct(
+        "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
+        ["e", "ee", "eee", "eeee", "eeeee"],
+    )
+)  # False
