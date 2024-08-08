@@ -9,3 +9,7 @@
 5. Cycle Sort - O(n^2)
 
 6. Quick Sort - Choosing a pivot and comparing the element in the array and merging the sorted array.
+
+    i) Best Case: O(n log.n)
+    ii) Avg Case: O(n log.n)
+    iii) Worst case: Worst Case: 𝑂(𝑛^2)

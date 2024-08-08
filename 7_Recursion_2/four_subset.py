@@ -10,14 +10,14 @@ def FindSubset(proc="", unproc="abc"):
 
 def ArraySubsets(string, current="", index=0):
     if index == len(string):
-        return [current]
+        return [[current]]
 
     subsets_with_char = ArraySubsets(string, current + string[index], index + 1)
     subsets_without_char = ArraySubsets(string, current, index + 1)
 
     return subsets_with_char + subsets_without_char
 
-# print(ArraySubsets("abc"))
+print(ArraySubsets("abc"))
 
 
 def FindSubsetsASCII(string, current="", index=0):

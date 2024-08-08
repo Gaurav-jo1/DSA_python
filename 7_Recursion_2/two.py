@@ -3,7 +3,7 @@ def SkipString(the_str:str, rem_str="apple"):
         return ""
 
     if the_str.startswith(rem_str):
-        return SkipString(the_str[5:])
+        return SkipString(the_str[len(rem_str):])
 
     return the_str[0] + SkipString(the_str[1:])
 
